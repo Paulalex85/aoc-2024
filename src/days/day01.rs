@@ -41,7 +41,11 @@ impl Day for Day01 {
 
     type Output2 = usize;
 
-    fn part_2(_input: &Self::Input) -> Self::Output2 {
-        unimplemented!("part_2")
+    fn part_2(input: &Self::Input) -> Self::Output2 {
+        input
+            .left
+            .iter()
+            .map(|x| input.right.iter().counts().get(x).unwrap_or(&0) * x)
+            .sum()
     }
 }
