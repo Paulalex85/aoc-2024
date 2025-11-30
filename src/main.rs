@@ -9,7 +9,7 @@ use days::*;
 
 mod days;
 
-const YEAR: usize = 2025; // change this if needed, add the missing day modules if < 2025
+const YEAR: usize = 2024; // change this if needed, add the missing day modules if < 2025
 const CLI_DAY_RANGE: RangeInclusive<i64> = if YEAR < 2025 { 1..=25 } else { 1..=12 };
 const VALID_DAY_RANGE: RangeInclusive<u32> =
     (*CLI_DAY_RANGE.start() as u32)..=(*CLI_DAY_RANGE.end() as u32);
